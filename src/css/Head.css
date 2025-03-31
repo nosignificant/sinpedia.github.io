@@ -1,0 +1,25 @@
+.Head {
+  display: flex;
+  flex-grow: 1;
+  position: sticky;
+  z-index: 999;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  text-decoration: none;
+  padding-left: 30px;
+}
+
+.HeadMenu {
+  display: flex;
+  list-style: none;
+}

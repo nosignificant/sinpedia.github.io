@@ -1,31 +1,31 @@
 @font-face {
   font-family: "Jgothic";
-  src: url(./components/fonts/SMJGothic10Std-Regular.otf);
+  src: url(../fonts/SMJGothic10Std-Regular.otf);
+}
+
+@font-face {
+  font-family: "SandollJebi";
+  src: url(../fonts/산돌제비B.TTF);
 }
 
 * {
-  font-family: "Jgothic";
+  font-family: "SandollJebi";
 }
 
 .App {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
 }
 
-.HeadMenu {
-  width: 100%;
-  height: 200px;
+.Center {
+  display: flex;
+  flex-direction: row;
 }
 
 .SideBar {
-  background-color: rgb(247, 246, 243);
-  width: 200px;
-}
-
-.SideBarHeader {
-  padding: 5px;
-  color: rgb(147, 146, 143);
-  font-weight: 700;
+  display: flex;
+  border: 1px solid black;
+  width: 150px;
 }
 
 .SideBarFooter {
@@ -47,6 +47,10 @@
   align-items: center;
   margin: auto;
   cursor: pointer;
+}
+
+.MemoContainer {
+  border: 1px solid black;
 }
 
 .MemoItem {

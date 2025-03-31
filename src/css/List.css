@@ -1,3 +1,8 @@
+.noteList {
+  display: flex;
+  width: 200px;
+}
+
 .MemoContainer {
   flex: 1;
   padding: 20px;

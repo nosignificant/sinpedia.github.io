@@ -1,5 +1,3 @@
-import "./MemoContainer.css";
-
 function MemoContainer({ memo, setMemo }) {
   if (memo === undefined) {
     return (
