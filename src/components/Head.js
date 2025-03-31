@@ -1,4 +1,4 @@
-import "../../css/Head.css";
+import "../css/Head.css";
 
 // index 0 == note
 // index 1 == Gallery

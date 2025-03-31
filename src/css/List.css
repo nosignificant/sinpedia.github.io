@@ -1,11 +1,17 @@
-.noteList {
+.List {
   display: flex;
+  flex-direction: row;
+}
+
+.SideBar {
+  display: flex;
+  height: 100%;
   width: 200px;
+  flex-grow: 1;
 }
 
 .MemoContainer {
-  flex: 1;
-  padding: 20px;
+  display: flex;
 }
 
 .MemoContainer_title {

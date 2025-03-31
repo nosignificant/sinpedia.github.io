@@ -1,16 +1,14 @@
-import MemoContainer from "./MemoContainer";
+import "../../css/List.css";
 
-function SideBar({ noteTitle, noteSelected, setNoteSelected }) {
+export default function SideBar({ noteTitle, noteSelected, setNoteSelected }) {
   return (
     <div className="SideBar">
+      this is list sidebar
       <noteList
         noteTitle={noteTitle}
         noteSelected={noteSelected}
         setNoteSelected={setNoteSelected}
       />
-      <MemoContainer />
     </div>
   );
 }
-
-export default SideBar;

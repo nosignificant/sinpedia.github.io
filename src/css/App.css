@@ -13,12 +13,15 @@
 }
 
 .App {
+  height: 100vh;
   display: flex;
+
   flex-direction: column;
 }
 
 .Center {
   display: flex;
+  height: 100%;
   flex-direction: row;
 }
 
