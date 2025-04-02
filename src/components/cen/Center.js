@@ -1,18 +1,17 @@
-import Gallery from "./Gallery";
-import List from "./List";
-import MemoContainer from "./MemoContainer";
+import GalleryView from "./GalleryView";
+import ListView from "./ListView";
 
 export default function Center({ selectedHeadIndex }) {
   if (selectedHeadIndex === 0)
     return (
       <div className="Center">
-        <List />
+        <ListView />
       </div>
     );
   if (selectedHeadIndex === 1)
     return (
       <div className="Center">
-        <Gallery />
+        <GalleryView />
       </div>
     );
 }
