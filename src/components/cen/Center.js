@@ -1,3 +1,5 @@
+import "../../css/App.css";
+
 import GalleryView from "./GalleryView";
 import ListView from "./ListView";
 

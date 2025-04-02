@@ -5,11 +5,11 @@ import { useState } from "react";
 import MemoContainer from "./MemoContainer";
 import SideBar from "./SideBar";
 
-export default function List({ selectedHeadIndex }) {
+export default function ListView({ selectedHeadIndex }) {
   const noteTitle = "note 1";
   const [noteSelected, setNoteSelected] = useState([noteTitle]);
   return (
-    <div className="List">
+    <div className="ListView">
       <SideBar
         noteTitle={noteTitle}
         noteSelected={noteSelected}

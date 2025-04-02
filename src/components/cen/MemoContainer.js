@@ -1,3 +1,5 @@
+import "../../css/List.css";
+
 function MemoContainer({ memo, setMemo }) {
   if (memo === undefined) {
     return (
