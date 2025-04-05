@@ -20,9 +20,11 @@ function findContent(id, list = SideBarList) {
 
 function ListContent({ noteIndex }) {
   const [html, setHtml] = useState("");
+  const [stateTitle, setStateTitle] = useState("");
 
   useEffect(() => {
     const entry = noteIndex === 0 ? defaultMemo : findContent(noteIndex);
+    if (!entry.children) setStateTitle(entry.title);
     if (!entry) return;
     if (entry.children) return;
     if (entry.content?.endsWith(".md")) {
@@ -30,12 +32,15 @@ function ListContent({ noteIndex }) {
         .then((res) => res.text())
         .then((md) => setHtml(marked(md)));
     } else {
-      setHtml(`<h1>${entry.title}</h1><p>${entry.content}</p>`);
+      setHtml(`<p>${entry.content}</p>`);
     }
   }, [noteIndex]);
 
   return (
-    <div className="ListContent" dangerouslySetInnerHTML={{ __html: html }} />
+    <div className="ListContent">
+      <ListTitle>{stateTitle}</ListTitle>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
   );
 }
 
@@ -43,11 +48,10 @@ export default ListContent;
 
 export const ListTitle = styled.div`
   width: 250px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding: 10px;
+  padding: 20px;
 `;
 export const Content = styled.div`
   width: 250px;
