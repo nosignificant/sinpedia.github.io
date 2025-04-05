@@ -1,21 +1,21 @@
 import "../../css/List.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import MemoContainer from "./MemoContainer";
+import ListContent from "./ListContent";
+import ListRight from "./ListRight";
 import SideBar from "./SideBar";
+export default function ListView() {
+  const [noteIndex, setNoteIndex] = useState(0);
+  useEffect(() => {
+    console.log("useEffect:", noteIndex);
+  }, [noteIndex]);
 
-export default function ListView({ selectedHeadIndex }) {
-  const noteTitle = "note 1";
-  const [noteSelected, setNoteSelected] = useState([noteTitle]);
   return (
     <div className="ListView">
-      <SideBar
-        noteTitle={noteTitle}
-        noteSelected={noteSelected}
-        setNoteSelected={setNoteSelected}
-      />
-      <MemoContainer />
+      <SideBar noteIndex={noteIndex} setNoteIndex={setNoteIndex} />
+      <ListContent noteIndex={noteIndex} />
+      <ListRight />
     </div>
   );
 }
