@@ -6,11 +6,12 @@ import "../css/Head.css";
 export default function Head({ setSelectedHeadIndex }) {
   return (
     <div className="Head">
-      <a className="Home" href="../../../public/index.html">
-        NOSIGN-DIGITAL
+      <a className="Title" href="../../../public/index.html">
+        SINPEDIA
       </a>
       <div className="HeadMenu">
         <p
+          className="Note"
           onClick={() => {
             console.log("Clicked");
             setSelectedHeadIndex(0);
@@ -19,6 +20,7 @@ export default function Head({ setSelectedHeadIndex }) {
           Note
         </p>
         <p
+          className="Gallery"
           onClick={() => {
             console.log("Clicked");
             setSelectedHeadIndex(1);

@@ -3,73 +3,14 @@
   src: url(../fonts/SMJGothic10Std-Regular.otf);
 }
 
-@font-face {
-  font-family: "SandollJebi";
-  src: url(../fonts/산돌제비B.TTF);
-}
-
-* {
-  font-family: "SandollJebi";
-}
-
 .App {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  display: flex;
+  height: 100vh;
 }
 
 .Center {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: row;
-}
-
-.SideBarFooter {
-  text-align: center;
-  padding: 10px 0;
-}
-
-.SideBarFooter_add-button {
-  background: none;
-  border-radius: 100px;
-  border: 2px solid #555;
-  color: #555;
-  width: 40px;
-  height: 40px;
-  font-size: 1.3rem;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  cursor: pointer;
-}
-
-.MemoContainer {
-  border: 1px solid black;
-}
-
-.MemoItem {
-  width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.MemoItem.selected {
-  background-color: rgba(100, 100, 100, 0.3);
-  font-weight: 500;
-}
-
-.MemoItem_delete-button {
-  background: none;
-  border: none;
-  color: red;
-  position: absolute;
-  cursor: pointer;
-  display: none;
+  flex: 1;
+  margin: 0 30px 0 30px;
 }

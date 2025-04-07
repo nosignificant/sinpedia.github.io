@@ -1,4 +1,5 @@
 import "./css/App.css";
+import "./css/List.css";
 import "./components/cen/Center";
 
 import { useState } from "react";

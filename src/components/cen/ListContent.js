@@ -38,8 +38,8 @@ function ListContent({ noteIndex }) {
 
   return (
     <div className="ListContent">
-      <ListTitle>{stateTitle}</ListTitle>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <ListTitle className="ListTitle">{stateTitle}</ListTitle>
+      <div className="ListText" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 }
@@ -47,17 +47,5 @@ function ListContent({ noteIndex }) {
 export default ListContent;
 
 export const ListTitle = styled.div`
-  width: 250px;
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 20px;
-`;
-export const Content = styled.div`
-  width: 250px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 10px;
 `;

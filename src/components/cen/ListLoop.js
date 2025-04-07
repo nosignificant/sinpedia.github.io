@@ -75,7 +75,4 @@ export const ItemPlusMinus = styled.button`
   width: 20px;
 `;
 
-export const EntryContainer = styled.div`
-  width: 100%;
-  padding-left: 20px;
-`;
+export const EntryContainer = styled.div``;

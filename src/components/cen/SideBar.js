@@ -1,3 +1,5 @@
+import "../../css/List.css";
+
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -35,10 +37,5 @@ SideBar.propTypes = {
 export default SideBar;
 
 const ListContainer = styled.div`
-  width: 250px;
-  height: 100%;
-  display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding: 10px;
 `;

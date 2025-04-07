@@ -1,0 +1,13 @@
+.Gallery {
+  display: flex;
+}
+.GalleryCompo {
+  padding: 20px;
+  border: solid rgb(209, 209, 209);
+  background-color: rgb(244, 244, 244);
+}
+
+.GalleryImg {
+  width: 200px;
+  height: 200px;
+}
