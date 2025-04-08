@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import defaultMemo from "../../db/explain.json";
 import SideBarList from "../../db/list.json";
+import ListOutline from "./ListOutline";
 
 function findContent(id, list = SideBarList) {
   for (const entry of list) {
@@ -39,6 +40,7 @@ function ListContent({ noteIndex }) {
   return (
     <div className="ListContent">
       <ListTitle className="ListTitle">{stateTitle}</ListTitle>
+      <ListOutline entry={findContent} />
       <div className="ListText" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
