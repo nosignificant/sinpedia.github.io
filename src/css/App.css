@@ -8,6 +8,11 @@
   flex-direction: column;
   display: flex;
   height: 100vh;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .Center {
