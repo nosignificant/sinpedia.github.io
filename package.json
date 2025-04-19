@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@astrojs/react": "^4.2.3",
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.2",
     "@testing-library/dom": "^10.4.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
     "gltfjsx": "^6.5.3",
     "marked": "^15.0.7",
     "prop-types": "^15.8.1",

@@ -1,0 +1,35 @@
+---
+const mdFiles = await Astro.glob('../content/note/*.md');
+
+const tree = {
+  id: 0,
+  title: 'general',
+  content: '',
+  children: [
+    {
+      id: 1,
+      title: 'book',
+      content: '',
+      children: mdFiles
+        .filter((md) => md.frontmatter.category === 'book')
+        .map((md) => ({
+          id: md.frontmatter.id,
+          title: md.frontmatter.title,
+          content: md.url
+        })),
+    },
+    {
+      id: 4,
+      title: 'work',
+      content: '',
+      children: mdFiles
+        .filter((md) => md.frontmatter.category === 'work')
+        .map((md) => ({
+          id: md.frontmatter.id,
+          title: md.frontmatter.title,
+          content: md.url
+        })),
+    }
+  ]
+};
+---
