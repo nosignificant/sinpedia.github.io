@@ -1,41 +1,36 @@
 import "../../css/List.css";
 
-import PropTypes from "prop-types";
-import styled from "styled-components";
-
-import SideBarList from "../../db/list.json";
-import ListLoop from "./ListLoop";
-
-const TGroupsPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.object),
-});
-
-const SideBar = ({ noteIndex, setNoteIndex }) => {
+const SideBar = ({ setSelectedIndex }) => {
   return (
     <div className="SideBar">
-      <ListContainer>
-        {SideBarList.map((entry) => (
-          <ListLoop
-            entry={entry}
-            depth={1}
-            key={entry.id}
-            noteIndex={noteIndex}
-            setNoteIndex={setNoteIndex}
-          ></ListLoop>
-        ))}
-      </ListContainer>
+      <div>
+        <p
+          onClick={() => {
+            console.log("Clicked 0");
+            setSelectedIndex(0);
+          }}
+        >
+          Home
+        </p>
+        <p
+          onClick={() => {
+            console.log("Clicked 1");
+            setSelectedIndex(1);
+          }}
+        >
+          Javascript
+        </p>
+        <p
+          onClick={() => {
+            console.log("Clicked");
+            setSelectedIndex(2);
+          }}
+        >
+          Notes
+        </p>
+      </div>
     </div>
   );
 };
 
-SideBar.propTypes = {
-  TreeGroups: PropTypes.arrayOf(TGroupsPropType),
-};
-
 export default SideBar;
-
-const ListContainer = styled.div`
-  flex-direction: column;
-`;
